@@ -7,24 +7,44 @@
         },
         "children": [
             {
-                "type": "InputBox",
+                "type": "Dropdown",
                 "properties": {
-                    "labelName": "Hello world text:",
-                    "allowBinding": true,
-                    "allowManualEntry": true,
-                    "textArea": true,
-                    "bindingPropertyName": "helloWorldData"
+                    "labelName": "Animation",
+                    "options": [
+                        {
+                            "option": "",
+                            "text": "Please Select"
+                        },
+                        {
+                            "option": "spinner",
+                            "text": "Spinner"
+                        },
+                        {
+                            "option": "dots",
+                            "text": "Dots"
+                        }
+                    ],
+                    "bindingPropertyName": "animationtype"
                 }
-            },
+            }
+        ]
+    },
+    {
+        "type": "Accordion",
+        "properties": {
+            "name": "Style",
+            "collapsed": false
+        },
+        "children": [
             {
-                "type": "InputBox",
+                "type": "ColorOpacityInput",
                 "properties": {
-                    "labelName": "Hello world response:",
-                    "allowBinding": true,
-                    "allowManualEntry": false,
-                    "bindingPropertyName": "helloWorldResponse"
+                    "labelName": "Color",
+                    "bindingPropertyName": "animationColor",
+                    "allowCheckbox": false,
+                    "hasOpacity": true
                 }
-            }          
+            }
         ]
     }
 ]

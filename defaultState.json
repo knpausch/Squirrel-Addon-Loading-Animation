@@ -1,4 +1,15 @@
 {
-    "helloWorldData": "Test",
-    "helloWorldResponse": ""
+    "animationtype": "",
+    "animationColor": {
+        "type": "solid",
+        "color": [
+            {
+                "color": "#2898ED",
+                "alpha": 1,
+                "ratio": 0
+            }
+        ],
+        "rotation": 0,
+        "enabled": true
+    }
 }

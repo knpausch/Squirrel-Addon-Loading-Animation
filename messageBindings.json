@@ -1,10 +1,10 @@
 [
     {
-        "property": "helloWorldData",
+        "property": "animationtype",
         "direction": "receive"
     },
     {
-        "property": "helloWorldResponse",
-        "direction": "send"
+        "property": "animationColor",
+        "direction": "receive"
     }
 ]

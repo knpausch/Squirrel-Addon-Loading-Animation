@@ -1,0 +1,68 @@
+body {
+	display: flex;
+	justify-content: center;
+	background-color: pink;
+}
+
+
+/* -------------- SPINNER -------------- */
+.spinner {
+    height: 10vmin;
+    width: 10vmin;
+    border: 6px solid; 
+    border-color: #2898ED;
+    border-right-color: #00000000;
+    border-radius: 100%;
+    -webkit-animation: rotate 1s infinite linear;
+  }
+  
+  
+  @-webkit-keyframes rotate {
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+/* -------------- DOTS -------------- */
+.dots {
+	display: flex;
+	--color: #2898ED;
+	--size-mid: 6vmin;
+	--size-dot: 1.5vmin;
+	--size-bar: 0.4vmin;
+	--size-square: 3vmin;
+	width: 10vmin;
+}
+
+.dots::before,
+.dots::after {
+	content: '';
+}
+
+.dots.--3::before,
+.dots.--3::after {
+	width: var(--size-dot);
+	height: var(--size-dot);
+	background-color: var(--color);
+	border-radius: 50%;
+	animation: dots-3 1.2s ease-in-out infinite;
+}
+
+.dots.--3::before {
+	left: calc(50% - 1.6vmin - var(--size-dot));
+}
+
+.dots.--3::after {
+	left: calc(50% + 1.6vmin);
+	animation-delay: -0.4s;
+}
+
+@keyframes dots-3 {
+	0%, 100% {
+		transform: translateY(-2.6vmin);
+	}
+	
+	44% {
+		transform: translateY(2.6vmin);
+	}
+}
