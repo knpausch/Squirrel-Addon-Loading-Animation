@@ -1,21 +1,33 @@
 body {
 	display: flex;
 	justify-content: center;
+	align-items: center; 
+	height: 100vh;
 	background-color: pink;
+	margin: 0;
 }
 
+/* -------------- TEST BOX -------------- */
+.box{
+	background-color: blue;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	/* -webkit-animation: rotate 1s infinite linear; */
+
+}
 
 /* -------------- SPINNER -------------- */
 .spinner {
-    height: 10vmin;
-    width: 10vmin;
+	--color: #2898ED;
+	height: 100px;
+	width: 100px;
     border: 6px solid; 
-    border-color: #2898ED;
+    border-color: var(--color);
     border-right-color: #00000000;
-    border-radius: 100%;
+	border-radius: 50%;
     -webkit-animation: rotate 1s infinite linear;
   }
-  
   
   @-webkit-keyframes rotate {
     100% {
@@ -26,12 +38,14 @@ body {
 /* -------------- DOTS -------------- */
 .dots {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	--color: #2898ED;
-	--size-mid: 6vmin;
-	--size-dot: 1.5vmin;
-	--size-bar: 0.4vmin;
-	--size-square: 3vmin;
-	width: 10vmin;
+	--size-mid: 60px;
+	--size-dot: 15px;
+	--size-bar: 4px;
+	--size-square: 30px;
+	width: 100px;
 }
 
 .dots::before,
@@ -59,10 +73,55 @@ body {
 
 @keyframes dots-3 {
 	0%, 100% {
-		transform: translateY(-2.6vmin);
+		transform: translateY(-5vmin);
 	}
 	
 	44% {
-		transform: translateY(2.6vmin);
+		transform: translateY(5vmin);
+	}
+}
+
+/* -------------- DICE -------------- */
+.dice {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	--color: #2898ED;
+	--size-mid: 60px;
+	--size-dice: 15px;
+	--size-bar: 4px;
+	--size-square: 30px;
+	width: 100px;
+}
+
+.dice::before,
+.dice::after {
+	content: '';
+}
+
+.dice.--3::before,
+.dice.--3::after {
+	width: var(--size-dice);
+	height: var(--size-dice);
+	background-color: var(--color);
+	animation: dice-3 1.2s ease-in-out infinite;
+}
+
+.dice.--3::before {
+	left: calc(50% - 1.6vmin - var(--size-dice));
+}
+
+.dice.--3::after {
+	left: calc(50% + 1.6vmin);
+	animation-delay: -0.4s;
+}
+
+@keyframes dice-3 {
+	0%, 100% {
+		transform: translateY(-5vmin);
+	}
+
+	44% {
+		transform: translateY(5vmin);
 	}
 }

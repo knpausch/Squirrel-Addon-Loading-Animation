@@ -22,9 +22,13 @@
                         {
                             "option": "dots",
                             "text": "Dots"
+                        },
+                        {
+                            "option": "dice",
+                            "text": "Dice"
                         }
                     ],
-                    "bindingPropertyName": "animationtype"
+                    "bindingPropertyName": "animationType"
                 }
             }
         ]
