@@ -20,12 +20,12 @@
                             "text": "Spinner"
                         },
                         {
-                            "option": "dots",
-                            "text": "Dots"
+                            "option": "dribble",
+                            "text": "Dribble"
                         },
                         {
-                            "option": "dice",
-                            "text": "Dice"
+                            "option": "side-step",
+                            "text": "Side Step"
                         }
                     ],
                     "bindingPropertyName": "animationType"

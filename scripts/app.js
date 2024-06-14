@@ -14,11 +14,11 @@
                 if(propertyValue == "spinner"){
                     document.getElementById('loader').className = "spinner"
                 }
-                if(propertyValue == "dots"){
-                    document.getElementById('loader').className = "dots --3"
+                if(propertyValue == "dribble"){
+                    document.getElementById('loader').className = "dribble"
                 }
-                if(propertyValue == "dice"){
-                    document.getElementById('loader').className = "dice --3"
+                if(propertyValue == "side-step"){
+                    document.getElementById('loader').className = "side-step"
                 }
                 break;
             case 'animationColor.color.*.color':
@@ -35,9 +35,9 @@
 
     function onInitState(e) {
         const state = e.detail.state
-
-        document.getElementById('loader').style.width = window.innerWidth + 'px';
-        document.getElementById('loader').style.height = window.innerHeight + 'px';
+        // document.getElementById('loader').style.width = window.innerWidth + 'px';
+        // document.getElementById('loader').style.height = window.innerHeight + 'px';
+        processSize()
     }
 
     function onPropertyChangesComplete() {}
@@ -52,20 +52,13 @@
 
     function onSetSize(e) {
         const size = e.detail.size;
-        document.getElementById('loader').style.width = window.innerWidth + 'px';
-        document.getElementById('loader').style.height = window.innerHeight + 'px';
-
-        // if(size.width != document.getElementById('loader').offsetWidth || size.height != document.getElementById('loader').offsetHeight) {
-        //     processSize()
-        // }
     }
 
     function onSetPosition(e) {
         const position = e.detail.position;
     }
 
-    // function processSize() {
-    //     Squirrel.setSize(new SquirrelSize(document.getElementById('loader').style.offsetWidth));
-    //     Squirrel.setSize(new SquirrelSize(document.getElementById('loader').style.offsetHeight));
-    // }
+    function processSize() {
+        Squirrel.setSize(document.getElementById('loader').offsetWidth, document.getElementById('loader').offsetHeight)
+    }
 })();
