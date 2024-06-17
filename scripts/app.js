@@ -20,6 +20,24 @@
                 if(propertyValue == "side-step"){
                     document.getElementById('loader').className = "side-step"
                 }
+                if(propertyValue == "roadway"){
+                    document.getElementById('loader').className = "roadway"
+                }
+                if(propertyValue == "inchworm"){
+                    document.getElementById('loader').className = "inchworm"
+                }
+                if(propertyValue == "rain"){
+                    document.getElementById('loader').className = "rain"
+                }
+                if(propertyValue == "square-dance"){
+                    document.getElementById('loader').className = "square-dance"
+                }
+                if(propertyValue == "shuffle"){
+                    document.getElementById('loader').className = "shuffle"
+                }
+                if(propertyValue == "firework"){
+                    document.getElementById('loader').className = "firework"
+                }
                 break;
             case 'animationColor.color.*.color':
                 document.getElementById('loader').style.setProperty('--color', propertyValue)

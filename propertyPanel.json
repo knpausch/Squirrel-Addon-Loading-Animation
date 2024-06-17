@@ -26,6 +26,30 @@
                         {
                             "option": "side-step",
                             "text": "Side Step"
+                        },
+                        {
+                            "option": "roadway",
+                            "text": "Roadway"
+                        },
+                        {
+                            "option": "inchworm",
+                            "text": "Inchworm"
+                        },
+                        {
+                            "option": "rain",
+                            "text": "Rain"
+                        },
+                        {
+                            "option": "square-dance",
+                            "text": "Square Dance"
+                        },
+                        {
+                            "option": "shuffle",
+                            "text": "Shuffle"
+                        },
+                        {
+                            "option": "firework",
+                            "text": "Firework"
                         }
                     ],
                     "bindingPropertyName": "animationType"
