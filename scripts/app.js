@@ -11,6 +11,11 @@
 
         switch (Squirrel.getGenericProperty(propertyName)) {
             case 'animationType':
+                if(propertyValue == "please-select"){
+                    document.getElementById('select-img').style.display = "block"
+                    document.getElementById('loader').className = ""
+                    break;
+                }
                 if(propertyValue == "spinner"){
                     document.getElementById('loader').className = "spinner"
                 }
@@ -38,6 +43,7 @@
                 if(propertyValue == "firework"){
                     document.getElementById('loader').className = "firework"
                 }
+                document.getElementById('select-img').style.display = "none"
                 break;
             case 'animationColor.color.*.color':
                 document.getElementById('loader').style.setProperty('--color', propertyValue)
@@ -53,9 +59,7 @@
 
     function onInitState(e) {
         const state = e.detail.state
-        // document.getElementById('loader').style.width = window.innerWidth + 'px';
-        // document.getElementById('loader').style.height = window.innerHeight + 'px';
-        processSize()
+        Squirrel.setSize(200, 200)
     }
 
     function onPropertyChangesComplete() {}
@@ -74,9 +78,5 @@
 
     function onSetPosition(e) {
         const position = e.detail.position;
-    }
-
-    function processSize() {
-        Squirrel.setSize(document.getElementById('loader').offsetWidth, document.getElementById('loader').offsetHeight)
     }
 })();

@@ -9,10 +9,10 @@
             {
                 "type": "Dropdown",
                 "properties": {
-                    "labelName": "Animation",
+                    "labelName": "Loading Style",
                     "options": [
                         {
-                            "option": "",
+                            "option": "please-select",
                             "text": "Please Select"
                         },
                         {
