@@ -12,6 +12,10 @@
                     "labelName": "Loading Style",
                     "options": [
                         {
+                            "option": "please-select",
+                            "text": "Please Select"
+                        },
+                        {
                             "option": "spinner",
                             "text": "Spinner"
                         },

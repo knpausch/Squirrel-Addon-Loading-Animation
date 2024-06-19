@@ -39,9 +39,17 @@
     }
 
     function renderAnimation() {
-        document.getElementById('loader').className = animationSelected
-        document.getElementById('loader').style.setProperty('--color', colorSelected)
-        document.getElementById('loader').style.setProperty('--opacity', opacitySelected)
+
+        if(animationSelected != 'please-select') {
+            document.getElementById('loader').className = animationSelected
+            document.getElementById('loader').style.setProperty('--color', colorSelected)
+            document.getElementById('loader').style.setProperty('--opacity', opacitySelected)
+            document.getElementById('select-img').style.display = 'none'
+        }
+        else {
+            document.getElementById('select-img').style.display = 'block'
+            document.getElementById('loader').className = ''
+        }
     }
 
     function onPropertyChangesComplete() {}
