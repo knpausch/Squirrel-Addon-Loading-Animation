@@ -20,9 +20,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	--color: #2898ED;
-
 	--opacity: 1;
-
 	--size-mid: 96vmin;
 	--size-dot: 24vmin;
 	--size-bar: 6.4vmin;
