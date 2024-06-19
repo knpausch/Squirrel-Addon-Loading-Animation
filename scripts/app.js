@@ -11,7 +11,6 @@
 
     function onInitState(e) {
         const state = e.detail.state
-        Squirrel.setSize(200, 200)
         
         if(state != null) {
             animationSelected = state.animationType
@@ -42,7 +41,7 @@
     function renderAnimation() {
         document.getElementById('loader').className = animationSelected
         document.getElementById('loader').style.setProperty('--color', colorSelected)
-        document.getElementById('loader').style.opacity = opacitySelected
+        document.getElementById('loader').style.setProperty('--opacity', opacitySelected)
     }
 
     function onPropertyChangesComplete() {}
